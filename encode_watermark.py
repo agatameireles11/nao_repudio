@@ -1,5 +1,4 @@
 #Esse codigo serve para inserir uma marca d'água em uma imagem.
-
 from PIL import Image
 import numpy as np
 
@@ -32,7 +31,7 @@ def encode_watermark(input_image_path, output_image_path, watermark_text):
     watermarked_image.save(output_image_path)
     print(f"Marca d'água inserida com sucesso em {output_image_path}")
 
-encode_watermark('original_image.png', 'watermarked_image.png', 'Esta é uma marca d\'água secreta')
+encode_watermark('img/original_image.png', 'img/watermarked_image.png', 'Esta é uma marca d\'água secreta')
 
 #A marca d'água inserida pelo código é do tipo invisível. Ela não altera visivelmente a imagem, mas esconde a informação dentro dos pixels da imagem de uma maneira que não é perceptível ao olho humano. Isso é feito modificando os bits menos significativos dos valores RGB dos pixels para armazenar o texto da marca d'água em formato binário.
 

@@ -22,7 +22,7 @@ def decode_watermark(watermarked_image_path):
         decoded_text += chr(int(byte, 2))
     return decoded_text
 
-extracted_watermark = decode_watermark('watermarked_image.png')
+extracted_watermark = decode_watermark('img/watermarked_image.png')
 print(f"Marca d'água extraída: {extracted_watermark}")
 
 
