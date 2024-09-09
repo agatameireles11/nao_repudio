@@ -1,5 +1,4 @@
 import digital_signature
-import os
 
 #Gerar chaves criptograficas
 private_key_pem, public_key_pem = digital_signature.generate_keys()
