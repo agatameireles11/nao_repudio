@@ -4,7 +4,7 @@ import hashing
 original_folder = "img/"
 folder_to_check = "img_modificado/"
 
-def teste():
+def teste_hash():
     for file in pathlib.Path("img").iterdir():
         if file.suffix in [".png", ".jpg", ".jpeg"]:
             print("\n----------------------------------------------------------------\n")
@@ -21,6 +21,8 @@ def teste():
             
             print("\n----------------------------------------------------------------\n")
 
+
+
 print("Teste de Integridade")
 print("----------------------------------------------------------------")
 
@@ -31,15 +33,15 @@ print("3 - digitar pasta de origem e pasta de destino")
 opcao = input("Digite a opção: ")
 
 if opcao == "1":
-    teste()
+    teste_hash()
 elif opcao == "2":
-    original_folder = "img_modificado/"
+    original_folder = "img/"
     folder_to_check = "img/"
-    teste()
+    teste_hash()
 elif opcao == "3":
     original_folder = input("Digite a pasta de origem: ") + "/"
     folder_to_check = input("Digite a pasta de destino: ") + "/"
-    teste()
+    teste_hash()
                 
         
 

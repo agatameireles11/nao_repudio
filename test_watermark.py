@@ -1,5 +1,19 @@
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
+import pathlib
+
+original_folder = "img/"
+folder_to_check = "img_modificado/"
+
+def teste_hash():
+    for file in pathlib.Path("img").iterdir():
+        if file.suffix in [".png", ".jpg", ".jpeg"]:
+            print("\n----------------------------------------------------------------\n")
+            print(f'Analisando a imagem: {file}')
+            
+            verify_watermark(original_folder + file.name, folder_to_check + file.name)
+            
+            print("\n----------------------------------------------------------------\n")
 
 # Função para comparar duas imagens e verificar se foi modificada
 def verify_watermark(image1_path, image2_path):
@@ -21,10 +35,23 @@ def verify_watermark(image1_path, image2_path):
         print("A imagem está intacta e original.")
 
 
-# Simulação: carregar a imagem supostamente alterada
-original_image = 'img/original_image.png'
-modified_image_watermark = 'img/watermarked_image.png'
-modified_image = 'img/modified_watermarked_image.png'
+print("Teste de Integridade")
+print("----------------------------------------------------------------")
 
-# Verificar se a imagem foi alterada comparando com a original com marca d'água
-verify_watermark(original_image, modified_image_watermark)
+print("1 - Comparando as imagens originais com as imagens modificadas")
+print("2 - Comparando as imagens originais com as imagens originais")
+print("3 - digitar pasta de origem e pasta de destino")
+
+opcao = input("Digite a opção: ")
+
+if opcao == "1":
+    teste_hash()
+elif opcao == "2":
+    original_folder = "img/"
+    folder_to_check = "img/"
+    teste_hash()
+elif opcao == "3":
+    original_folder = input("Digite a pasta de origem: ") + "/"
+    folder_to_check = input("Digite a pasta de destino: ") + "/"
+    teste_hash()
+                

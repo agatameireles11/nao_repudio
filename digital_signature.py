@@ -51,7 +51,6 @@ def verify_signature(public_pem, image_path, signature):
     with open(image_path, 'rb') as file:
         image_data = file.read()
 
-    # Verifica a assinatura
     try:
         public_key.verify(
             signature,
