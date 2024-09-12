@@ -21,9 +21,3 @@ def decode_watermark(watermarked_image_path):
             break
         decoded_text += chr(int(byte, 2))
     return decoded_text
-
-extracted_watermark = decode_watermark('img/watermarked_image.png')
-print(f"Marca d'água extraída: {extracted_watermark}")
-
-extracted_watermark_modified = decode_watermark('img/modified_watermarked_image.png')
-print(f"Marca d'água extraída da imagem modificada: {extracted_watermark_modified}")

@@ -15,13 +15,33 @@ pip install Pillow cryptography numpy
 ```
 ## 💻 Rodando aplicação no Linux
 
+Para rodar os testes de assinatura digital
 ```bash
-
+python test_digital_signature.py
 ```
+Para rodar os testes de integridade com hashing
+```bash
+python teste_de_integridade_hashing.py
+```
+
+Para rodar os teste com watermark
+```bash
+python test_watermark.py
+```
+Existe 3 opções:
+
+	1 - Comparando as imagens originais com as imagens modificadas (Aqui, basta colocar as imagens originais na pasta img, e as modificadas na pasta img_modificado. OBS: é necessario que o nome das imagens originas e as imagens modificadas sejam o mesmo)
+
+	2 - Comparando as imagens originais com as imagens originais(Aqui, basta colocar as imagens originais na pasta img, e as copias das não modificadas na pasta img_integra. OBS: é necessario que o nome das imagens originas e as imagens copias sejam o mesmo)
+
+	3 - digitar pasta de origem e pasta de destino(Aqui, basta digitar o nome de duas pastas, uma contendo as originas, a outra as modificadas, de forma semelhante as outras opções, o nome das imagens devem ser o mesmo em ambas as pastas)
+
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 - [Git](https://git-scm.com/)
+- [Python](https://python.org/)
 
 ## 👨‍💻 Autores
 - Ágata Meireles Carvalho - [GitHub](https://github.com/agatameireles11)

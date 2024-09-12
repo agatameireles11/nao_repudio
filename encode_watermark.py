@@ -31,12 +31,3 @@ def encode_watermark(input_image_path, output_image_path, watermark_text):
     watermarked_image.save(output_image_path)
     print(f"Marca d'água inserida com sucesso em {output_image_path}")
 
-encode_watermark('img/original_image.png', 'img/watermarked_image.png', 'Esta é uma marca d\'água secreta')
-
-#A marca d'água inserida pelo código é do tipo invisível. Ela não altera visivelmente a imagem, mas esconde a informação dentro dos pixels da imagem de uma maneira que não é perceptível ao olho humano. Isso é feito modificando os bits menos significativos dos valores RGB dos pixels para armazenar o texto da marca d'água em formato binário.
-
-#Como funciona:
-#Cada caractere do texto da marca d'água é convertido em binário.
-#O código então insere cada bit do texto binário nos bits menos significativos dos valores de cor (R, G, B) dos pixels da imagem.
-#A imagem resultante (watermarked_image.png) terá a mesma aparência visual da original, mas conterá o texto oculto dentro dos pixels.
-#Para testar se a marca d'água foi realmente inserida é com o decode_watermark
